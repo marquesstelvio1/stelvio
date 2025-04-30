@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000000;
+    color: #ffffff; 
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #ffffff; 
+    animation: cor 4s infinite;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.3em;
+    text-align: left;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.content {
+    text-align: left;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1em;
+    text-align: justify;
+}
+@keyframes cor
+{
+    0% {border-color: darkblue;}
+    50%{border-color: red;}
+    75%{border-color: yellow;}
+    100%{border-color: darkblue;}
+}
+.home{
+    height: 50px;
+    width: 50px;
+    float: right;
+    
+}
+.link{
+    text-decoration: none;
+    animation: mudarCor 4s infinite;
+    color: white;
+}
+@keyframes mudarCor
+{
+    0% {color: darkblue;}
+    50%{color: red;}
+    75%{color: yellow;}
+    100%{color: darkblue;}
+}
+.logo/*Stelvio marques rgb*/
+{
+    color: white;
+    text-align: left;
+    animation: mudarCor 4s infinite;
+    margin: 0 5px;
+}

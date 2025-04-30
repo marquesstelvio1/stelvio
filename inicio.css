@@ -1,0 +1,297 @@
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body,html
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+.content
+{
+display: flex; /* height: é a altura e, vh é viewport height relativo a janela de visualização*/
+height: 100vh;/* logo 1% é 1vh 100%=100vh*/
+}
+
+.esquerda
+{
+    margin: 0;
+    padding: 0;
+width: 50%;             /*div que trata tudo do lado esquerdo*/
+background-color: black;/*padding é uma propriedade de espqçamento interno*/
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+header/*cabeçalho*/
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo/*Stelvio marques rgb*/
+{
+    color: white;
+    margin: 0px 15px;
+    animation: mudarCor 4s infinite;
+}
+
+@keyframes mudarCor
+{
+    0% {color: darkblue;}
+    50%{color: red;}
+    75%{color: yellow;}
+    100%{color: darkblue;}
+}
+
+nav ul/*div de navegação não ordenada*/
+{
+list-style: none;
+display: flex;
+gap: 10px;
+margin: 0 5px;
+flex-direction: row;
+}
+
+nav a/*referências*/
+{
+    margin: 10px 5px;
+text-decoration: none;
+color: white;
+text-align: left;
+}
+
+main/*meio*/
+{
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.oi
+{
+font-size: 50px;
+margin: 0px 220px;
+margin-bottom: 20px ;
+color: #bbbb;
+}
+.nome
+{
+    font-size: 100px;
+    margin: 0px 220px ;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3 ease, text-shadow 0.3s ease;
+}
+.nome:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 5px darkblue, 0 0 10px red, 0 0 20px red , 0 0 40px red;
+    animation: rgbAnimation 4s infinite ease;
+}
+.role
+{
+font-size: 20px;
+margin: 300px 220px;
+margin-top: 0;
+}
+.brilho
+{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.brilho:active
+{
+color: red;
+text-shadow: 0 0 10px red, 0 0 20px red;
+transition: all 0.2s;
+}
+
+.secao-cont{
+    transform: translateX(-50%, -50%) scale(0.7);
+    left: 50px;
+    top: 50px;
+    position: fixed;
+    left: -100%;
+    opacity: 0;
+    transition: left 0.6s ease, opacity 0.6s;
+    background: black;
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+    border: 2px solid red;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 100;
+}
+
+#contato:target
+{
+    display: block;
+    left: 0;
+    opacity: 1;
+    transform: translateX(0);
+}
+.bordas{
+    border: 3px solid red;
+    border-radius: 10px;
+    border-left: none;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3s);
+    animation: cor 4s infinite;
+}
+@keyframes cor
+{
+    0% {border-color: darkblue;}
+    50%{border-color: red;}
+    75%{border-color: yellow;}
+    100%{border-color: darkblue;}
+}
+
+.secao-cont:target{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%, -50%) scale(1);
+}
+
+.fechar{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+}
+.direita
+{
+    background: url(imagens/img1.jpg) no-repeat center center/cover;
+width: 50%;
+position: relative;
+}
+.direita img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.social
+{
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.social a
+{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.icone
+{
+width: 25px;
+height: 25px;
+object-fit: contain;
+max-width: 25px;
+max-height: 25px;
+display: block;
+}
+
+.imgs
+{
+    border: 3px solid red;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3s);
+    animation: cor 4s infinite;
+}
+.nome1
+{
+    text-decoration: none;
+    color: white;
+}
+#clock{
+    font-size: 48px;
+    top: 20px;
+    right: 20px;
+    color: white;
+    position: absolute;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background-color: black;
+    text-shadow: 0 0 10px red, 0 0 20px lime, 0 0 30px blue;
+    animation: rgbAnimation 4s infinite ease;
+    text-align: right;
+}
+
+@keyframes rgbAnimation {
+  0% { text-shadow: 0 0 10px darkblue, 0 0 20px darkblue, 0 0 30px darkblue; }
+  25% { text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; }
+  75% { text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow; }
+  100% { text-shadow: 0 0 10px darkblue, 0 0 20px darkblue, 0 0 30px darkblue; }
+}
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .esquerda, .direita {
+        width: 100%;
+    }
+
+    .nome {
+        font-size: 50px;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .oi, .role {
+        margin: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    #clock {
+        position: static;
+        margin: 10px auto;
+        text-align: center;
+    }
+}

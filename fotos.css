@@ -1,0 +1,93 @@
+body
+ {
+background-color: black;
+color: white;
+ }
+.container
+{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+.container img
+{
+border-radius:10px ;
+}
+.slide
+{
+    
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    gap: 10px;
+    
+}
+.slide img
+{
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover
+{
+    transform: scale(1.1);
+}
+.intro
+{
+text-align: center;
+font-size: 50px;
+}
+.logo/*Stelvio marques rgb*/
+{
+    color: white;
+    margin: 0px 5px;
+    animation: mudarCor 4s infinite;
+}
+
+@keyframes mudarCor
+{
+    0% {color: darkblue;}
+    50%{color: red;}
+    75%{color: yellow;}
+    100%{color: darkblue;}
+}
+.home{
+    height: 25px;
+    width: 25px;
+    float: right;
+    margin-right: 10px;
+    margin-top: -30px;
+}
+.galeria
+{   
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    padding: 20px;
+}
+.galeria img{
+    
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border: 3px solid transparent;
+    transition: border-color 0.5 ease, transform 0.3s ease;
+}
+.galeria img:hover
+{
+    transform: scale(1.1);
+    animation: cor 5s infinite;
+}
+@keyframes cor
+{
+    0% {border-color: darkblue;}
+    50%{border-color: red;}
+    75%{border-color: yellow;}
+    100%{border-color: darkblue;}
+}
