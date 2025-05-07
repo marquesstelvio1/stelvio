@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stélvio Marques</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+   
+    <div class="content">
+        <div class="esquerda">
+            <header class="cabeçalho">
+                <h1 class="logo">Stélvio Marques</h1>
+                <nav>
+                    <ul>
+                        <li><a href="bio.html" class="brilho" title="Venha saber mais sobre mim"><br>Biografia</a></li>
+                        <li><a href="fotos.html" class="brilho" title="Aprecia a bela obra de arte que é a minha cara"><br>Fotos</a></li>
+                        <li><a href="#contato" class="brilho" class="botao-contat" title="Fala comigo atraves do whatsapp, x, telegram ou no ig"><br>Contacto</a></li>
+                        <div id="contato" class="secao-cont bordas">
+                            <a href="#" class="fechar">x</a>
+                            <img src="imagens/what1.jpg" width="100" height="100"> <p><a href="https://contate.me/244935165532">+244935165532</a></p>
+                            <img src="imagens/ig1.jpg" width="100" height="100"><p><a href="https://www.instagram.com/marques_stelvio?igsh=cTRndzRtczRsaTZp">marques_stelvio</a></p>
+                            <img src="imagens/OIP.jpg" width="100" height="100"><p><a href="https://x.com/stelvio715?t=kbR9PKxaiEvgi-u4arhmqQ&s=09">stelvio715</a></p>
+                            <img src="imagens/tel1.jpg" width="100" height="100"><p><a href="#">+244935165532</a></p>
+                        </div>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <h3 class="oi">Oi eu sou:</h3>
+                <h1 class="nome"><a href="bio.html" class="nome1">Stélvio <br>Marques</a></h1>
+                <h5 class="role">Estudante de Informática<br>Programador<br>Iniciante em administração de rede</h5>
+            </main>
+    </div>
+    
+    
+        <div class="direita">
+            <header>
+            <div id="clock">00:00:00</div>
+        </header>
+            <script>
+                function atualizarClock(){
+                    const agora = new Date()
+                    let horas = agora.getHours().toString().padStart(2,'0');
+                    let minutos = agora.getMinutes().toString().padStart(2,'0');
+                    let sgundos = agora.getSeconds().toString().padStart(2,'0');
+                    
+                    document.getElementById(`clock`).innerText=`${horas}:${minutos}:${sgundos}`;
+                }
+                setInterval(atualizarClock, 1000)
+                atualizarClock();
+            </script>
+            
+        <div class="social imgs">
+            <a href="https://contate.me/244935165532"><img src="imagens/what1.jpg" alt="whatsapp" class="icone"><title>whatsapp</title></a>
+            <a href="https://www.instagram.com/marques_stelvio?igsh=cTRndzRtczRsaTZp"><img src="imagens/ig1.jpg" alt="instagram" class="icone"><title>IG:marrques_stelvio</title></a>
+            <a href="#"><img src="imagens/tel1.jpg" alt="telegram" class=" icone"><title>telegram</title></a>
+       
+            
+            
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    window.addEventListener("load",function() {
+        if(window.location.hash==="#contato"){
+         history.replaceState(null,null," ");       
+        }
+    }
+);
+</script>
